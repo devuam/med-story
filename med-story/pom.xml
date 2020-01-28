@@ -26,7 +26,7 @@
 		<org.springframework.jpa.version>1.11.22.RELEASE</org.springframework.jpa.version>
 		<org.springframework.security.version>3.2.3.RELEASE</org.springframework.security.version>
 		<postgresql.version>9.1-901-1.jdbc4</postgresql.version>
-		<rabbitmq.version>3.3.4</rabbitmq.version>
+		<rabbitmq.version>4.8.0</rabbitmq.version>
 		<slf4j.version>1.7.6</slf4j.version>
 	</properties>
 
