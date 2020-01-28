@@ -1,5 +1,7 @@
 package mx.christez.medstory.controller;
 
+import java.util.concurrent.TimeoutException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -29,7 +31,7 @@ public class RecoverController {
 	
 	@RequestMapping(value = "/recover", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public String doRegister(@RequestBody AppUser user) {
+	public String doRecover(@RequestBody AppUser user) {
 		loggerConfiguration.logInfoMessage("Attempt to recover password for email [" + user.getEmail() + "]");
 		
 		try {
@@ -50,6 +52,10 @@ public class RecoverController {
 			loggerConfiguration.logErrorMessage("Recover password UserNotActiveException [" + unae.getMessage() + "] for email [" + user.getEmail() + "]");
 			
 			return unae.getMessage();
+		} catch (TimeoutException te) {
+			loggerConfiguration.logErrorMessage("Recover password TimeoutException [" + te.getMessage() + "] for email [" + user.getEmail() + "]");
+			
+			return te.getMessage();
 		}
 	}
 }

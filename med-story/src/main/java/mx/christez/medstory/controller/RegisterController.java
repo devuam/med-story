@@ -1,5 +1,7 @@
 package mx.christez.medstory.controller;
 
+import java.util.concurrent.TimeoutException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -36,7 +38,11 @@ public class RegisterController {
 			
 			loggerConfiguration.logInfoMessage("Email [" + user.getEmail() + "] successfully registered");
 			
-			notificationService.notify(user, Constants.ACTIVATE_NOTIFICATION_QUEUE);
+			try {
+				notificationService.notify(user, Constants.ACTIVATE_NOTIFICATION_QUEUE);
+			} catch (TimeoutException te) {
+				loggerConfiguration.logErrorMessage("Register TimeoutException [" + te.getMessage() + "] for email [" + user.getEmail() + "]");
+			}
 			
 			loggerConfiguration.logInfoMessage("Email [" + user.getEmail() + "] completed notification precess after registration");
 			

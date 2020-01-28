@@ -1,6 +1,7 @@
 package mx.christez.medstory.service;
 
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class NotificationService {
 	@Autowired
 	ObjectMapper objectMapper;
 	
-	public void notify(AppUser user, String queue) {
+	public void notify(AppUser user, String queue) throws TimeoutException {
 		if(System.getProperty("LOG_LEVEL", "INFO").equals("DEBUG"))
 			loggerConfiguration.logDebugMessage("Attempt to send the message to queue [" + queue + "] for email ["+ user.getEmail() + "]");
 		
