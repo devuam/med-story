@@ -14,7 +14,7 @@
 		<hibernate.version>4.3.4.Final</hibernate.version>
 		<hibernate.validator.version>5.1.0.Final</hibernate.validator.version>
 		<hsql.version>2.3.2</hsql.version>
-		<jackson.version>2.9.9</jackson.version>
+		<jackson.version>2.10.2</jackson.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
 		<javax.servlet.jsp.version>2.2.1</javax.servlet.jsp.version>
 		<junit.version>4.11</junit.version>
