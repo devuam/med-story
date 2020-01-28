@@ -1,0 +1,481 @@
+body{
+	font-family: 'Comfortaa';
+	margin: 0;
+	padding: 0;
+	background: url(../images/bg.png);
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+}
+
+header{
+	position: relative;
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.logo{
+	color: #18A3EB;
+	height: 60px;
+	font-size: 36px;
+	line-height: 60px;
+	padding: 0 20px;
+	text-align: center;
+	box-sizing: border-box;
+	float: left;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.image-logo{
+	width: 50px;
+	height: 50px;
+}
+
+nav{
+	float: right;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+}
+
+nav ul li a{
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #7e7e7e;
+}
+
+nav ul li a.active, nav ul li a:hover{
+	background: #18A3EB;
+	color: #ffffff;
+	transition: 0.5s;
+	text-decoration: none;
+}
+
+.clearfix{
+	clear: both;
+}
+
+@media(max-width: 1200px){
+	header{
+		margin: 20px;
+	}	
+}
+
+@media(max-width: 768px){
+	.menu-toggle{
+		display: block;
+		width: 40px;
+		height: 40px;
+		margin: 10px;
+		float: right;
+		cursor: pointer;
+		text-align: center;
+		font-size: 30px;
+		color: #18A3EB;
+	}
+
+	.menu-toggle:before{
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 40px;
+	}
+
+	.menu-toggle.active:before{
+		content: '\f00d';
+	}
+
+	nav{
+		display: none;
+	}
+
+	nav.active{
+		display: block;
+		width: 100%;
+	}
+
+	nav.active ul{
+		display: block;
+	}
+
+	nav.active ul li a{
+		margin: 0;
+	}
+}
+
+.generalHeader{
+	color: #428bca;
+	font-weight: bolder;
+}
+
+.generalFooter{
+	background-color: #428bca;
+	padding: 25px;
+	margin-top: 100px;
+	color: #ffffff;
+	border-radius: 5px;
+}
+
+/********************************************************************************************************************************
+Index classes *******************************************************************************************************************
+********************************************************************************************************************************/
+
+.ajs-message.ajs-customSuccess {
+	font-weight: 700;
+	color: #ffffff; 
+	background-color: #428bca;
+	border-color: pink;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+.ajs-message.ajs-customError {
+	font-weight: 700;
+	color: #ffffff; 
+	background-color: #d9534f;
+	border-color: pink;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+.indexImageHeader{
+	height: 100px;
+	margin-top: 75px;
+	width: 100px;
+}
+
+.indexUserContainer{
+	width: 100%;
+  	position: relative;
+}
+
+.indexUserLogin{
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+	width: 100%;
+  	height: 100%;
+  	position: absolute;
+  	left: 15px;
+}
+
+.indexUserLogin.closed{
+	opacity: 0;
+	visibility: hidden;
+}
+
+.indexUserRegister{
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+	width: 100%;
+  	height: 100%;
+  	position: absolute;
+  	left: 15px;
+}
+
+.indexUserRegister.open{
+	opacity: 1;
+	visibility: visible;
+}
+
+.indexUserRecover{
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+	width: 100%;
+  	height: 100%;
+  	position: absolute;
+  	left: 15px;
+}
+
+.indexUserRecover.open{
+	opacity: 1;
+	visibility: visible;
+}
+
+.indexUserActions{
+	background: #ffffff;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-bottom: 100px;
+	padding-left: 50px;
+	padding-top: 25px;
+	padding-right: 50px;
+	padding-bottom: 25px;
+}
+
+.indexUserActions h4{
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.indexUserActions input{
+	margin-bottom: 25px;
+}
+
+.loginSpinner{
+	visibility: hidden;
+}
+
+.registerSpinner{
+	visibility: hidden;
+}
+
+.recoverSpinner{
+	visibility: hidden;
+}
+
+.indexStandardAlert{
+	margin-top: 25px;
+}
+
+.indexActionLink{
+	padding: 0;
+}
+
+.indexUserLink{
+	font-size: 10px;
+	font-weight: 700;
+	margin-left: 0px;
+}
+
+/********************************************************************************************************************************
+Patients classes ****************************************************************************************************************
+********************************************************************************************************************************/
+
+.patientsContainer{
+	margin-top: 25px;
+}
+
+.sidenavbar {
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	background-color: rgba(24,163,235,0.5);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+}
+
+.sidenavbar a {
+	padding: 8px 8px 8px 8px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #ffffff;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenavbar a:hover {
+  	color: #f1f1f1;
+}
+
+.sidenavbar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	margin-left: 50px;
+	margin-top: 5px;
+}
+
+.sidenavbar p {
+	color: #ffffff;
+	font-weight: 700;
+}
+
+#patientsContent {
+	transition: margin-left .5s;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenavbar {padding-top: 15px;}
+	.sidenavbar a {font-size: 18px;}
+}
+
+.patientNew{
+	font-size: 20px;
+	cursor: pointer;
+	color: rgba(24,163,235,0.5);
+	font-weight: 700;
+}
+
+.patientNew:hover{
+	color: rgba(24,163,235,1);
+}
+
+.patientInput{
+	margin-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.patientInput input{
+	font-size: 12px;
+}
+
+.patientImage{
+	width: 50px;
+	height: 50px;
+}
+
+.ui-datepicker {
+    margin: 5px auto 0;
+    font: 8pt Comfortaa;
+    width: 200px;:
+}
+
+.ui-datepicker-header {
+    background: #18A3EB;
+    color: #18A3EB;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+	font-family: 'Comfortaa';
+	font-weight: bolder;
+	border-radius: 5px;
+	border: 1px solid #ffffff;
+	margin: 1px;
+	border: none;
+   	font-size: 8px;
+   	padding: 2px;
+}
+
+.ui-datepicker-prev span, .ui-datepicker-next span {
+    background-image: none !important;
+}
+
+.ui-datepicker-prev span.ui-icon {
+    text-indent: 0;
+    cursor: pointer;
+}
+
+.ui-datepicker-prev span:before {
+    content: "\f060  ";
+    font-family: FontAwesome;
+    position: relative;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.ui-datepicker-prev:hover {
+    color: #ffffff;
+    background-color: #18A3EB;
+    border: 1px solid #ffffff;
+}
+
+.ui-datepicker-prev span, .ui-datepicker-next span {
+    background-image: none !important;
+}
+
+.ui-datepicker-next span.ui-icon {
+    text-indent: 0;
+    cursor: pointer;
+}
+
+.ui-datepicker-next span:before {
+    content: "\f061  ";
+    font-family: FontAwesome;
+    position: relative;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.ui-datepicker-next:hover {
+    color: #ffffff;
+    background-color: #18A3EB;
+    border: 1px solid #ffffff;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+  	background-color: #18A3EB;
+  	color: #ffffff;
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+  background: rgb(24,163,235,0.5);
+}
+
+.ui-datepicker-calendar .ui-state-active {
+	border: 2px solid #337ab7;
+	border-radius: 5px;
+	font-weight: bolder;
+}
+
+.createSpinner{
+	visibility: hidden;
+}
+
+.patientsTableContainer{
+	padding-left: 50px;
+	padding-top: 25px;
+	padding-right: 50px;
+	padding-bottom: 25px;
+}
+
+.patientsTable{
+	margin-top: 25px;
+	border: 2px solid #18A3EB;
+	border-radius: 5px;
+	font-size: 12px;
+}
+
+.patientsTable thead{
+	background-color: #18A3EB;
+	color: #ffffff;
+}
+
+.patientsTable thead th {
+	text-align: center;
+    position: relative;
+    background-image: none !important;
+}
+  
+.patientsTable thead th.sorting:after,
+.patientsTable thead th.sorting_asc:after,
+.patientsTable thead th.sorting_desc:after {
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    display: block;
+    font-family: FontAwesome;
+}
+
+.patientsTable thead th.sorting:after {
+    content: "\f0dc";
+    color: #ffffff;
+    font-size: 0.8em;
+    padding-top: 0.12em;
+}
+
+.patientsTable thead th.sorting_asc:after {
+    content: "\f0de";
+}
+
+.patientsTable thead th.sorting_desc:after {
+    content: "\f0dd";
+}
+
+.patientsActionsButton{
+	margin: 2px;
+}
+
+.deleteSpinner{
+	visibility: hidden;
+}

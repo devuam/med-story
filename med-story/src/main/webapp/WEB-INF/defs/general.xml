@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="template" template="/WEB-INF/layout/template.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+	
+	<definition name="dashboard" extends="template">
+		<put-attribute name="title" value="Inicio" />
+		<put-attribute name="body" value="/WEB-INF/jsp/dashboard.jsp" />
+		<put-attribute name="current" value="dashboard" />
+	</definition>
+	
+	<definition name="index" extends="template">
+		<put-attribute name="title" value="Med Story" />
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+		<put-attribute name="current" value="index" />
+	</definition>
+	
+	<definition name="patients" extends="template">
+		<put-attribute name="title" value="Pacientes" />
+		<put-attribute name="body" value="/WEB-INF/jsp/patients.jsp" />
+		<put-attribute name="current" value="patients" />
+	</definition>
+	
+	<definition name="patients-details" extends="template">
+		<put-attribute name="title" value="Detalles del paciente" />
+		<put-attribute name="body" value="/WEB-INF/jsp/patients-details.jsp" />
+		<put-attribute name="current" value="patients-details" />
+	</definition>
+	
+	<definition name="unauthorized" extends="template">
+		<put-attribute name="title" value="Acceso denegado" />
+		<put-attribute name="body" value="/WEB-INF/jsp/unauthorized.jsp" />
+		<put-attribute name="current" value="unauthorized" />
+	</definition>
+</tiles-definitions>
