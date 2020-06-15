@@ -12,7 +12,7 @@
 		<commons.codec.version>1.4</commons.codec.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
 		<hibernate.version>4.3.4.Final</hibernate.version>
-		<hibernate.validator.version>5.1.0.Final</hibernate.validator.version>
+		<hibernate.validator.version>5.3.5.Final</hibernate.validator.version>
 		<hsql.version>2.3.2</hsql.version>
 		<jackson.version>2.9.9</jackson.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
