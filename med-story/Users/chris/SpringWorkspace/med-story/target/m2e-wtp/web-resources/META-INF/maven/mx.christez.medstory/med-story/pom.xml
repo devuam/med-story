@@ -22,7 +22,7 @@
 		<log4j.version>2.6.1</log4j.version>
 		<mail.version>1.4.7</mail.version>
 		<mysql.version>5.1.6</mysql.version>
-		<org.springframework.version>4.3.10.RELEASE</org.springframework.version>
+		<org.springframework.version>4.3.29.RELEASE</org.springframework.version>
 		<org.springframework.jpa.version>1.11.22.RELEASE</org.springframework.jpa.version>
 		<org.springframework.security.version>3.2.3.RELEASE</org.springframework.security.version>
 		<postgresql.version>9.1-901-1.jdbc4</postgresql.version>
